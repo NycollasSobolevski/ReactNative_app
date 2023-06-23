@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
+    paddingTop:150,
     backgroundColor: '#433576',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap:20,
+    gap:25,
   },
 });
