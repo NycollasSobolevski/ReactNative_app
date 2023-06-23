@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View, Image, Touchable, TouchableOpacity } from 'react-native';
+import Logo from './assets/React-icon.svg.png'
+import  CustomInput  from './components/CustomInput'
 
 export default function App() {
   
@@ -16,20 +18,24 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        placeholder='Email'
-        value={email}
-        onChangeText={(EsteValor) => setEmailInputValue(EsteValor)}/>
+      <Image
+        source={Logo}
+        style={{
+          width : 130,
+          height : 130,
+          resizeMode: 'contain'
+        }}/>
 
-      <Text> { email } </Text>
-
-      <TextInput
-        placeholder='Senha'
-        value={senha}
-        secureTextEntry={true}
-        onChangeText = {(EsteValor) => setPasswordInputValue(EsteValor)}/>
+      <CustomInput style={styles.inputWraper} value={email} placeholder='Email' placeholderTextColor='#00d8ff' func={setEmailInputValue}/>
+      <CustomInput style={styles.inputWraper} value={senha} placeholder='Senha' placeholderTextColor='#00d8ff' func={setPasswordInputValue}
+         isPassword={true}/>
       
-      <Button title='Entrar'/>
+        <TouchableOpacity>
+          <View style={{backgroundColor:'#00d8ff', width:156, height:45, alignItems:'center', justifyContent:"center", borderRadius:15}}>
+            <Text>Entrar</Text>
+          </View>
+        </TouchableOpacity>
+
     </View>
   );
 }
@@ -37,10 +43,19 @@ export default function App() {
 
 
 const styles = StyleSheet.create({
+    inputWraper : {
+    paddingLeft:10,
+    width:306,height:45,
+    color:"#00d8ff",
+    borderRadius:8,
+    backgroundColor:'#302850',
+    },
+
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#433576',
     alignItems: 'center',
     justifyContent: 'center',
+    gap:20,
   },
 });
