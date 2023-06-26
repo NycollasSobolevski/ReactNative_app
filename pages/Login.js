@@ -1,18 +1,16 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@firebase/auth';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { useNavigation } from '@react-navigation/native';
 import  CustomInput  from '../components/CustomInput';
 import Logo from '../assets/React-icon.svg.png';
 import { useEffect, useState } from 'react';
 import app from '../firebaseConfig';
 
-const Stack = createNativeStackNavigator();
 
 export default function Login() {
   const auth = getAuth(app);
   const navigation = useNavigation();
-  
+
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
 

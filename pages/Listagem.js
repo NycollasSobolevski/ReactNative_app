@@ -1,9 +1,6 @@
 import {  Text, View, Image, TouchableOpacity } from 'react-native';
 import styles from '../styles/styles'
 
-
-const Stack = createNativeStackNavigator();
-
 export default function Listagem() {
 
   return (
