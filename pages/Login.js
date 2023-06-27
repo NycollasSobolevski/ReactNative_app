@@ -40,6 +40,8 @@ export default function Login() {
   const signIn = () => {
     signInWithEmailAndPassword(auth, email, senha)
       .then((userCredentials) => {
+        navigation.navigate('Listagem')
+
         console.log(userCredentials);
       }).catch((err) => {
         console.error(err);
