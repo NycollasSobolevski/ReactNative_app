@@ -63,6 +63,9 @@ npx expo install react-native-gesture-handler
 ```bash
 npm i axios
 ```
+```bash
+npx expo install @expo/webpack-config@^18.0.1
+```
 
 
 Run as WEB
