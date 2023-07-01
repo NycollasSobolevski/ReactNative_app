@@ -47,6 +47,23 @@ Install (add) Expo
 ```bash
 yarn add expo
 ```
+Install Components
+```bash
+npm install @react-navigation/native
+```
+```bash
+npx expo install react-native-screens react-native-safe-area-context
+```
+```bash
+npm install @react-navigation/stack
+```
+```bash
+npx expo install react-native-gesture-handler
+```
+```bash
+npm i axios
+```
+
 
 Run as WEB
 ```bash
